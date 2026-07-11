@@ -38,15 +38,15 @@ The **GrowEasy AI CSV Importer** solves this by utilizing **AI-assisted semantic
 ```mermaid
 flowchart LR
     subgraph Client [Client Interface - Next.js]
-        direction LR
+        direction TB
         U[Drag & Drop Upload] --> P[PapaParse Preview] --> C[Confirm Ingestion]
     end
     subgraph Server [Ingestion Backend - Express]
-        direction LR
+        direction TB
         M[Multer Memory Stream] --> S[csv-parse Stream Reader] --> B[Batching Queue: Chunks of 15] --> LLM[AI Mapping: Gemini / OpenAI]
     end
     subgraph Engine [Validation & Normalization]
-        direction LR
+        direction TB
         V[Zod Schema Verification] --> N[Normalizer: CC & Split Contacts] --> D[Deduplication Checks] --> R[CRM Result Summary]
     end
     C --> M
@@ -191,8 +191,18 @@ Full dark theme styling mapped across all tables, progress elements, and dashboa
 ## Application & Request Flow
 
 ```mermaid
-flowchart LR
-    A[Upload CSV] --> B[Local Preview via PapaParse] --> C[Confirm Import] --> D[POST /api/v1/import Stream] --> E[Multer Memory Buffer] --> F[csv-parse node-stream] --> G[Batching Service: Chunks of 15] --> H[AI Mapping: Gemini/OpenAI] --> I[Zod Structured Output Check] --> J[Normalizer: Split Contacts & Country Codes] --> K[Deduplication Set Check] --> L[Generate JSON Summary Output]
+flowchart TD
+    A[Upload CSV] --> B[Local Preview via PapaParse]
+    B --> C[Confirm Import]
+    C --> D[POST /api/v1/import Stream]
+    D --> E[Multer Memory Buffer]
+    E --> F[csv-parse node-stream]
+    F --> G[Batching Service: Chunks of 15]
+    G --> H[AI Mapping: Gemini/OpenAI]
+    H --> I[Zod Structured Output Check]
+    I --> J[Normalizer: Split Contacts & Country Codes]
+    J --> K[Deduplication Set Check]
+    K --> L[Generate JSON Summary Output]
 ```
 
 ---
