@@ -1,0 +1,4 @@
+Name,Notes,Email
+John,DROP TABLE users;,john@example.com
+John,<script>alert('xss')</script>,john@example.com
+John,"=HYPERLINK(""http://evil.com"")",john@example.com

@@ -1,0 +1,48 @@
+Client Name,Primary Phone,Email Address,Project Interested,Possession,Sales Owner,Remarks,Location,Campaign,Created Time,Firm,Region,Status
+John Doe,+919876543210,john@example.com,,,,Call tomorrow,Bangalore,,2026-06-01 10:20:00,Google,Karnataka,Interested
+Jane Smith,+919876543211,jane@example.com,,,,Asked for demo,Hyderabad,,2026-06-02 11:15:00,Microsoft,Telangana,Busy
+Rahul Sharma,+919876543212,rahul@example.com,,,,Converted,Pune,,2026-06-03 09:30:00,Amazon,Maharashtra,Closed
+Amit Verma,+919999111111,amit@gmail.com,,,,,,Facebook Ads,2026-06-12,,,
+Neha Kapoor,+919999111112,neha@gmail.com,,,,,,Summer Campaign,2026-06-13,,,
+Rohit Singh,9876543210,rohit@gmail.com,,,,,,Google Ads,2026-06-15 14:22,,,
+Priya Nair,9876543211,priya@gmail.com,,,,,,Google Ads,2026-06-15 15:01,,,
+Ankit,9999911111,ankit@gmail.com,,,,Interested,,,,,,
+Sonia,9999922222,sonia@gmail.com,,,,Needs callback,,,,,,
+Rajesh,9999912345,rajesh@gmail.com,,,,,,,,TCS,Mumbai,
+John,9999911111,"john@gmail.com;john.office@gmail.com",,,,,,,,,,
+Rahul,"9999911111,8888822222",rahul@gmail.com,,,,,,,,,,
+Amit,9999911111,,,,,,,,,,,
+Neha,,neha@gmail.com,,,,,,,,,,
+Rahul,,,,,,,,,TCS,,,
+Ankit,,,,,,,,,Infosys,,,
+,,,,,,,,,,,,
+John,9999911111,john@gmail.com,,,,,,,,,,
+John,9999911111,john@gmail.com,,,,,,,,,,
+José,9999911111,john@gmail.com,,,,Café owner,,,,,,
+李雷,9999922222,lilei@gmail.com,,,,中国客户,,,,,,
+山田太郎,9999933333,yamada@gmail.com,,,,日本,,,,,,
+John,9999911111,john@gmail.com,,,,🔥 Hot Lead,,,,,,
+Priya,9999911112,priya@gmail.com,,,,😊 Interested,,,,,,
+John,9999911111,john@example.com,,,,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua,,,,,,
+John,9999911111,john@gmail.com,,,,"Customer said ""Call tomorrow""",,,,,,
+John,9999911111,john@gmail.com,,,,"Street 1, MG Road, Bangalore",,,,,,
+John,9999911111,john@gmail.com,,,,"Call tomorrow
+Interested in premium package",,,,,,
+John,9999911111,john@gmail.com,,,,,,,Yesterday,,,
+Rahul,9999911112,rahul@gmail.com,,,,,,,Next Monday,,,
+Neha,9999911113,neha@gmail.com,,,,,,,2026-06-12,,,
+John,9999911111,john@gmail.com,,,,,,,,,,Interested
+Rahul,9999911112,rahul@gmail.com,,,,,,,,,,Busy
+Priya,9999911113,priya@gmail.com,,,,,,,,,,Not Interested
+Ankit,9999911114,ankit@gmail.com,,,,,,,,,,Sale Closed
+John,9999911111,john@gmail.com,Leads On Demand,,,,,,,,,
+Rahul,9999911112,rahul@gmail.com,Eden Park,,,,,,,,,
+Priya,9999911113,priya@gmail.com,Unknown Source,,,,,,,,,
+John,9999911111,john@gmail.com,,,,"DROP TABLE users;",,,,,,
+John,9999911111,john@gmail.com,,,,"<script>alert('xss')</script>",,,,,,
+John,"=HYPERLINK(""http://evil.com"")",john@gmail.com,,,,,,,,,,
+John,+1 2025551234,john@example.com,,,,,,,,,,
+Priya,+91 9876543210,priya@example.com,,,,,,,,,,
+Akira,+81 9012345678,akira@example.com,,,,,,,,,,
+Rahul Sharma,9876543210,rahul@gmail.com,Eden Park,Dec 2026,Amit,Needs site visit,Bangalore,,,,,
+Priya Mehta,9876543211,priya@gmail.com,Meridian Tower,Ready to Move,Neha,Interested in 3 BHK,Hyderabad,,,,,

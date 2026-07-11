@@ -1,0 +1,4 @@
+created_at,name,email,mobile,company,city,state,country,status,notes
+2026-06-01 10:20:00,John Doe,john@example.com,+919876543210,Google,Bangalore,Karnataka,India,Interested,Call tomorrow
+2026-06-02 11:15:00,Jane Smith,jane@example.com,+919876543211,Microsoft,Hyderabad,Telangana,India,Busy,Asked for demo
+2026-06-03 09:30:00,Rahul Sharma,rahul@example.com,+919876543212,Amazon,Pune,Maharashtra,India,Closed,Converted

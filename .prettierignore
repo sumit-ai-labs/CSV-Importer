@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+.next/
+out/
+coverage/
+package-lock.json
+*.log
+.env
+.env.*
+Dockerfile
+docker-compose.yml
