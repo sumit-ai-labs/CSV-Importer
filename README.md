@@ -5,7 +5,6 @@
 ![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
 ![Node 22](https://img.shields.io/badge/Node-v22-339933?style=flat-square&logo=node.js&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 A production-grade, AI-assisted CSV Importer SaaS application that intelligently extracts and maps heterogeneous, arbitrarily structured CSV datasets into a standardized CRM contact schema.
 
@@ -37,23 +36,21 @@ The **GrowEasy AI CSV Importer** solves this by utilizing **AI-assisted semantic
 ## High-Level System Architecture
 
 ```mermaid
-flowchart TD
+flowchart LR
     subgraph Client [Client Interface - Next.js]
-        U[Drag & Drop Upload] --> P[PapaParse Preview]
-        P --> C[Confirm Ingestion]
+        direction LR
+        U[Drag & Drop Upload] --> P[PapaParse Preview] --> C[Confirm Ingestion]
     end
     subgraph Server [Ingestion Backend - Express]
-        C --> M[Multer Memory Stream]
-        M --> S[csv-parse Stream Reader]
-        S --> B[Batching Queue: Chunks of 15]
-        B --> LLM[AI Mapping: Gemini / OpenAI Fallback]
+        direction LR
+        M[Multer Memory Stream] --> S[csv-parse Stream Reader] --> B[Batching Queue: Chunks of 15] --> LLM[AI Mapping: Gemini / OpenAI]
     end
     subgraph Engine [Validation & Normalization]
-        LLM --> V[Zod Schema Verification]
-        V --> N[Normalizer: Country Codes & Split Contacts]
-        N --> D[Deduplication Set Checks]
-        D --> R[CRM Result Summary Response]
+        direction LR
+        V[Zod Schema Verification] --> N[Normalizer: CC & Split Contacts] --> D[Deduplication Checks] --> R[CRM Result Summary]
     end
+    C --> M
+    LLM --> V
 ```
 
 ---
@@ -99,8 +96,7 @@ flowchart TD
 25. [Known Limitations](#known-limitations)
 26. [What I Learned](#what-i-learned)
 27. [Contributing](#contributing)
-28. [License](#license)
-29. [Author](#author)
+28. [Author](#author)
 
 ---
 
@@ -195,18 +191,8 @@ Full dark theme styling mapped across all tables, progress elements, and dashboa
 ## Application & Request Flow
 
 ```mermaid
-flowchart TD
-    A[Upload CSV] --> B[Local Preview parsing via PapaParse]
-    B --> C[Confirm Import]
-    C --> D[POST /api/v1/import stream payload]
-    D --> E[Multer stream extraction]
-    E --> F[csv-parse node-stream parsing]
-    F --> G[Batching Service: chunks of 15]
-    G --> H[AI Mapping: Gemini / OpenAI Fallback]
-    H --> I[Zod Validation of Structured Output]
-    I --> J[Normalization Service: split multi-contacts & extract CC]
-    J --> K[Deduplication Set Verification]
-    K --> L[Generate Summary & Return CRM Result]
+flowchart LR
+    A[Upload CSV] --> B[Local Preview via PapaParse] --> C[Confirm Import] --> D[POST /api/v1/import Stream] --> E[Multer Memory Buffer] --> F[csv-parse node-stream] --> G[Batching Service: Chunks of 15] --> H[AI Mapping: Gemini/OpenAI] --> I[Zod Structured Output Check] --> J[Normalizer: Split Contacts & Country Codes] --> K[Deduplication Set Check] --> L[Generate JSON Summary Output]
 ```
 
 ---
@@ -745,17 +731,11 @@ npm run test:e2e
 
 ---
 
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
----
-
 ## Author
 
-**Sumit**  
+**Sumit Dubey**  
 Built as part of the GrowEasy Software Developer Assignment.
 
-- **GitHub**: [github.com/sumit](https://github.com/sumit)
-- **LinkedIn**: [linkedin.com/in/sumit](https://linkedin.com/in/sumit)
-- **Email**: [sumit@example.com](mailto:sumit@example.com)
+- **Email**: [sumitdvivedi2504@gmail.com](mailto:sumitdvivedi2504@gmail.com)
+- **LinkedIn**: [linkedin.com/in/sumit-dubey-68780a2a7](https://www.linkedin.com/in/sumit-dubey-68780a2a7/)
+- **GitHub**: [github.com/sumit-ai-labs](https://github.com/sumit-ai-labs)
